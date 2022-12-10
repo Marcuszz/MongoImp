@@ -1,0 +1,19 @@
+{
+    "name": "mc/mc",
+    "autoload": {
+        "psr-4": {
+            "Mc\\Mc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "marcuszz",
+            "email": "marcuzcalaguas@gmail.com"
+        }
+    ],
+    "require": {
+        "mustache/mustache": "^2.14",
+        "mongodb/mongodb": "^1.12",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

@@ -1,0 +1,60 @@
+
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <title>Students</title>
+    </head>
+   <div class="container">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-xs-5">
+                     <a role="button" class="btn btn-primary" href="add.php">Add </a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Birthdate</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Program</th>
+                            <th scope="col">Contact Number</th>
+                            <th scope="col">Emergency Contact</th>
+                            <th>Action</th>
+                            <th></th>
+                        </tr>
+                        <?php 
+                            foreach ($result as $studentInf){
+                        ?>
+ {{#result}}
+                        <tbody>
+                            <tr class="fst-normal">
+                                <th scope="row">{{studentId}}</th>
+                                <td>{{firstName}}</td>
+                                <td>{{lastName}}</td>
+                                <td>{{birthdate}}</td>
+                                <td>{{address}}</td>
+                                <td>{{program}}</td>
+                                <td>{{contactNumber}}</td>
+                                <td>{{emergencyContact}}</td>
+                                <td>
+                                    <a role="button" class="btn btn-dark m-3" href="edit.php?id={{_id}}">Edit</a>
+                                </td>
+                                <td>
+                                    <a role="button" class="btn btn-danger m-3" href="delete.php?id={{_id}}">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    {{/result}}
+                    <?php 
+                        }?>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
